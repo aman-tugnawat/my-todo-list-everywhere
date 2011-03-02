@@ -1,0 +1,45 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:style>
+		.settingsHeader {
+			margin: 0px 0px 5px 10px;
+		}
+
+		
+		.settingsCategory {
+			border-top: 1px solid #dbd9d5;
+			padding-top: 5px;
+			margin-bottom: 5px;
+		}
+		
+		.settingsCategoryName {
+			font-weight: bold;
+		}
+		
+		.settingsRow {
+			margin: 5px 0px 5px 20px;
+		}
+	</ui:style>
+
+	<g:VerticalPanel width="100%">
+		<g:HTMLPanel>
+			<div class="centerContainer">
+				<div class='{style.settingsHeader}'>
+					<g:Anchor href='javascript:;' ui:field="backButton">&lt;&lt;
+						Back to todo
+						list</g:Anchor>
+				</div>
+
+				<div class='{style.settingsCategory}'>
+					<div class='{style.settingsCategoryName}'>My account settings</div>
+					<div class='{style.settingsRow}'>
+						<g:Anchor href='javascript:;' ui:field="deleteAccountAnchor">Delete
+							my account</g:Anchor>
+					</div>
+				</div>
+			</div>
+		</g:HTMLPanel>
+	</g:VerticalPanel>
+</ui:UiBinder> 

@@ -1,0 +1,10 @@
+.DS_Store
+war/mynotes/gwt/*
+war/mynotes/.*\.gwt.rpc$
+war/mynotes/clear.cache.gif
+war/mynotes/hosted.html
+war/mynotes/mynotes.nocache.js
+war/WEB-INF/classes/
+war/WEB-INF/appengine-generated/*
+.gwt/.gwt-log
+.settings

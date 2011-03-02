@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:style src="../resources/GlobalStyles.css">		
+		.menuUnderTodo {
+			padding-top: 10px;
+			paddinb-bottom: 10px;
+		}
+		
+		.advise {
+			position: absolute;
+			top: 2px;
+			right: 10px;
+			color: #777777;
+		}
+		
+		.pressEnter {
+			position: absolute;
+			top: 2px;
+			right: 10px;
+			color: #777777;
+		}
+		
+		.relative {
+			position: relative;
+		}
+		
+		.add-a-todo-box {
+			
+		}
+	</ui:style>
+
+	<g:VerticalPanel width="100%">
+		<g:HTMLPanel>
+
+			<div class="{style.centerContainer}">
+				<div class='{style.relative}'>
+
+					<g:TextBox width="100%" ui:field='newNote' styleName="{style.add-a-todo-box}" />
+
+
+					<g:Label ui:field='advise' styleName="{style.advise}" text="Add a todo" />
+					<g:Label ui:field='pressEnter' styleName="{style.pressEnter}"
+						text="Press Enter after typing your todo" />
+				</div>
+				<div class='{style.menuUnderTodo}'>
+					<g:Anchor href='javascript:;' ui:field='deleteLink'>Delete</g:Anchor>
+				</div>
+
+			</div>
+		</g:HTMLPanel>
+		<g:FlexTable width="100%" ui:field='notesTable' />
+	</g:VerticalPanel>
+</ui:UiBinder> 

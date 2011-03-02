@@ -1,0 +1,41 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:style>
+		.headerContainer {
+			padding: 0 11px 35px;
+		}
+		
+		.topMenu {
+			float: right;
+			margin-top: 5px;
+		}
+		
+		.tagLine {
+			text-align: center;
+			padding-top: 30px;
+			font-size: 2em;
+			font-weight: bold;
+		}
+		
+		.userName{
+			display:inline	
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<div class='{style.headerContainer}'>
+
+			<div class="{style.topMenu}">
+				<g:Label ui:field='userName' styleName="{style.userName}" />
+				-
+				<g:Anchor href='javascript:;' ui:field='settings'>Settings</g:Anchor>
+				-
+				<g:Anchor href='javascript:;' ui:field='signOut'>Log out</g:Anchor>
+			</div>
+			<div class='{style.tagLine}'>Your todo list everywhere</div>
+
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>
