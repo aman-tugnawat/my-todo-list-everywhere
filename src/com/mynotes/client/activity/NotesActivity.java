@@ -35,6 +35,8 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.FocusEvent;
 import com.google.gwt.event.dom.client.FocusHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
+import com.google.gwt.event.dom.client.KeyDownEvent;
+import com.google.gwt.event.dom.client.KeyDownHandler;
 import com.google.gwt.event.dom.client.KeyPressEvent;
 import com.google.gwt.event.dom.client.KeyPressHandler;
 import com.google.gwt.event.shared.EventBus;
@@ -150,14 +152,15 @@ public class NotesActivity extends AbstractActivity {
     }
 
     public void bind() {
-        noteKeyPressHandlerRegistration = display.getNoteKeyPressHandlers().addKeyPressHandler(new KeyPressHandler() {
-            @Override
-            public void onKeyPress(KeyPressEvent event) {
-                if (event.getCharCode() == KeyCodes.KEY_ENTER) {
+        noteKeyPressHandlerRegistration = display.getNoteKeyDownHandlers().addKeyDownHandler(new KeyDownHandler() {
+			@Override
+			public void onKeyDown(KeyDownEvent event) {
+				if (event.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
                     addNote();
                 }
-            }
-        });
+			}
+		});
+        
         noteFocusHandlerRegistration = display.getNoteFocusHandlers().addFocusHandler(new FocusHandler() {
             @Override
             public void onFocus(FocusEvent event) {
