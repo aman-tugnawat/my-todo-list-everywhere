@@ -75,22 +75,23 @@ public class HomeServlet extends HttpServlet {
 
         // Inlined CSS for less server request
         writer.append("<style type=\"text/css\">");
-        writer.append(".container{ width: 900px; margin-left: auto ; margin-right: auto;}");
-        writer.append(".center{ margin-top:100px; background-color:#E0E8FF; border:1px solid #AAA; padding: 40px;}");
-        writer.append(".todoList{font-size:2em;font-weight:bold;}");
-        writer.append(".footer{margin-top:10px;color:#A7A7A7;text-align:center;}");
+        writer.append("body{font-family: Arial, Helvetica, sans-serif; background-color:#F1F1F1; width: 100%; text-align: center}");
+        writer.append(".container{ width: 900px; margin-left: auto ; margin-right: auto; display: block; text-align: left}");
+        writer.append(".center{ margin-top:100px; background-color:#FFFFFF; border:1px solid #AAA; padding: 40px;}");
+        writer.append(".title{font-size:2em; font-weight:bold;}");
+        writer.append(".intro{line-height:1.5em; color:#888888;}");
+        writer.append(".footer{margin-top:10px; color:#A7A7A7;text-align:center; font-size: 0.9em;}");
         writer.append("</style>");
         writer.append("</head><body>");
         writer.append("<div class=\"container\">");
         writer.append("<div class=\"center\">");
-        writer.append("<span class=\"todoList\">Todo list everywhere</span>");
-        writer.append("<p>Manage your todo list from everywhere.</p>");
+        writer.append("<span class=\"title\">Your Todo list everywhere</span>");
+        writer.append("<p class=\"intro\">Are you always writing down what you must not forget ? Have you ever spend time to find your paper todo list ? Now this is done. With this online app you will manage your todo list from everywhere. No more time spending to seek your list, more todo loose. And it's FREE !</p>");
         writer.append("<a href=");
         writer.append(urlLogIn);
         writer.append(">Sign in with you Google Account</a>");
         writer.append("</div>");
-        writer.append(
-            "<div class=\"footer\"><p>Source code available at: <a href=\"http://code.google.com/p/my-todo-list-everywhere\">http://code.google.com/p/my-todo-list-everywhere</a></p><div>");
+        writer.append("<div class=\"footer\"><p>Source code available at: <a href=\"http://code.google.com/p/my-todo-list-everywhere\">http://code.google.com/p/my-todo-list-everywhere</a></p><div>");
         writer.append("</div>");
         writer.append("</body></html>");
     }

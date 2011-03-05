@@ -1,15 +1,3 @@
-body,table {
-  font-size: small;
-}
-
-body {
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-.centerContainer {
-	padding: 15px 11px 15px 11px;
-}
-
 .mainPanel {
   width: 100%;
   background-color: white;
@@ -25,16 +13,5 @@ body {
 
 .centerContainer {
 	padding: 15px 11px 15px 11px;
-}
-
-.rowFContainer {
-	padding: 5px 11px 5px 11px;
-	border-top: 2px solid #dbd9d5;
-	border-right: 2px solid #dbd9d5;
-}
-
-.rowContainer {
-	padding: 5px 11px 5px 11px;
-	border-top: 2px solid #dbd9d5;
 }
 
