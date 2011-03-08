@@ -38,6 +38,7 @@ import java.util.logging.Logger;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
+import javax.jdo.Transaction;
 
 public class LoginHelper {
     private static Logger log = Logger.getLogger(LoginHelper.class.getName());
@@ -51,7 +52,8 @@ public class LoginHelper {
         UserAccount        user         = null;
         UserAccount        detachedUser = null;
         Query              q            = pm.newQuery(UserAccount.class, "authId == :authId");
-
+        Transaction 	   tx 			= pm.currentTransaction();
+        
         q.setUnique(true);
 
         try {
@@ -61,6 +63,7 @@ public class LoginHelper {
 
             user = (UserAccount) q.execute(authId);
 
+            tx.begin();
             if (user != null) {
                 log.info("User already exists, logged in ");
             } else {
@@ -69,8 +72,10 @@ public class LoginHelper {
                 user.setBasicInfo(authId, name, email);
                 user = pm.makePersistent(user);
             }
-
+            
             user.setLastActivity(new Date());
+            
+            tx.commit();
             
             detachedUser = pm.detachCopy(user);
         } catch (Exception e) {
