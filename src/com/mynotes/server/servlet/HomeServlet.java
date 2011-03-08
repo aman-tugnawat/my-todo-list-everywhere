@@ -75,7 +75,7 @@ public class HomeServlet extends HttpServlet {
 
         // Inlined CSS for less server request
         writer.append("<style type=\"text/css\">");
-        writer.append("body{font-family: Arial, Helvetica, sans-serif; background-color:#F1F1F1; width: 100%; text-align: center}");
+        writer.append("body {font-family: Arial, Helvetica, sans-serif; background-color:#F1F1F1; width: 100%; text-align: center}");
         writer.append(".container{ width: 900px; margin-left: auto ; margin-right: auto; display: block; text-align: left}");
         writer.append(".center{ margin-top:100px; background-color:#FFFFFF; border:1px solid #AAA; padding: 40px;}");
         writer.append(".title{font-size:2em; font-weight:bold;}");

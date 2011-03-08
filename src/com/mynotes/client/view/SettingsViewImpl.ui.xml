@@ -4,40 +4,59 @@
 
 	<ui:style>
 		.settingsHeader {
-			margin: 0px 0px 5px 10px;
+			font-size: 1.7em;
+			padding: 0;
+			margin: 0px 0px 5px 0px;
 		}
-
 		
 		.settingsCategory {
 			border-top: 1px solid #dbd9d5;
-			padding-top: 5px;
-			margin-bottom: 5px;
+			padding-top: 20px;
+			margin-bottom: 20px;
+			overflow: auto;
+			width: 100%
 		}
 		
 		.settingsCategoryName {
+			font-size: 1em;
 			font-weight: bold;
+			margin: 0;
+			width: 150px;
+			position:relative;
+			float: left;
 		}
 		
-		.settingsRow {
-			margin: 5px 0px 5px 20px;
+		.settingsCategoryContent {
+			margin: 0;
+			position:relative;
+			float:left;
+		}
+		
+		.settingsFooter {
+			border-top: 1px solid #dbd9d5;
+			padding-top: 10px;
+			display:block;
 		}
 	</ui:style>
 
 	<g:VerticalPanel width="100%">
 		<g:HTMLPanel>
 			<div class="centerContainer">
-				<div class='{style.settingsHeader}'>
-					<g:Anchor href='javascript:;' ui:field="backButton">&lt;&lt;
-						Back to todo
-						list</g:Anchor>
-				</div>
-
+				<h2 class='{style.settingsHeader}'>
+					Settings
+				</h2>
 				<div class='{style.settingsCategory}'>
-					<div class='{style.settingsCategoryName}'>My account settings</div>
-					<div class='{style.settingsRow}'>
+					<div class='{style.settingsCategoryName}'>My account </div>
+					<div class='{style.settingsCategoryContent}'>
 						<g:Anchor href='javascript:;' ui:field="deleteAccountAnchor">Delete
 							my account</g:Anchor>
 					</div>
+				</div>
+				<div class='{style.settingsFooter}'>
+					<g:Anchor href='javascript:;' ui:field="backButton">&lt;&lt;
+						Back to
+						todo
+						list</g:Anchor>
 				</div>
 			</div>
 		</g:HTMLPanel>

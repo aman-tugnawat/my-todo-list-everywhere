@@ -2,32 +2,28 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
-	<ui:style src="../resources/GlobalStyles.css">		
-		.menuUnderTodo {
-			padding-top: 10px;
-			paddinb-bottom: 10px;
-		}
-		
-		.advise {
-			position: absolute;
-			top: 2px;
-			right: 10px;
-			color: #777777;
-		}
-		
-		.pressEnter {
-			position: absolute;
-			top: 2px;
-			right: 10px;
-			color: #777777;
-		}
-		
+	<ui:style src="../resources/GlobalStyles.css">
 		.relative {
 			position: relative;
 		}
 		
 		.add-a-todo-box {
-			
+			height: 2em;
+			padding:0;
+		}
+		
+		.advise {
+			position: absolute;
+			right: 10px;
+			color: #777777;
+			top: 0px;
+			height: 2em;
+			line-height: 2em;
+		}
+		
+		.menuUnderTodo {
+			padding-top: 10px;
+			paddinb-bottom: 10px;
 		}
 	</ui:style>
 
@@ -36,12 +32,9 @@
 
 			<div class="{style.centerContainer}">
 				<div class='{style.relative}'>
-
 					<g:TextBox width="100%" ui:field='newNote' styleName="{style.add-a-todo-box}" />
-
-
 					<g:Label ui:field='advise' styleName="{style.advise}" text="Add a todo" />
-					<g:Label ui:field='pressEnter' styleName="{style.pressEnter}"
+					<g:Label ui:field='pressEnter' styleName="{style.advise}"
 						text="Press Enter after typing your todo" />
 				</div>
 				<div class='{style.menuUnderTodo}'>

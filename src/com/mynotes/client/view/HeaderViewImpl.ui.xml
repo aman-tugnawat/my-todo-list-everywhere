@@ -17,6 +17,7 @@
 			padding-top: 30px;
 			font-size: 2em;
 			font-weight: bold;
+			text-shadow: #FFFFFF 0px 1px;
 		}
 		
 		.userName{

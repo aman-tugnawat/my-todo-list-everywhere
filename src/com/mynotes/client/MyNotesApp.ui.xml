@@ -9,9 +9,15 @@
 			width: 100%;
 			text-align:center;
 		}
+		
+		.main {
+			font-family: Arial, Helvetica, sans-serif; 
+			background-color:#F1F1F1; 
+			width: 100%;
+		}
 	</ui:style>
 
-	<g:HTMLPanel>
+	<g:HTMLPanel styleName='{style.main}'>
 		<g:VerticalPanel horizontalAlignment="ALIGN_CENTER" styleName='{style.loadingPopup}'>
 			<g:SimplePanel ui:field='loadingPopup'/>
 		</g:VerticalPanel>
