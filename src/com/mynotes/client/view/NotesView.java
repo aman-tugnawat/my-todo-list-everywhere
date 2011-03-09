@@ -56,6 +56,8 @@ public interface NotesView {
     void setVisibleNoteAdvise(boolean visible);
 
     void setVisibleNotePressEnter(boolean visible);
+    
+    void setVisibleDeleteButton(boolean visible);
 
     String getNoteText();
 

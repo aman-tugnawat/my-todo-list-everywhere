@@ -176,6 +176,11 @@ public class NotesViewImpl extends Composite implements NotesView {
     public void setVisibleNotePressEnter(boolean visible) {
         pressEnter.setVisible(visible);
     }
+    
+	@Override
+	public void setVisibleDeleteButton(boolean visible) {
+		deleteLink.setVisible(visible);
+	}
 
     interface NotesViewUiUiBinder extends UiBinder<Widget, NotesViewImpl> {}
 }

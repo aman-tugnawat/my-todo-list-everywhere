@@ -120,6 +120,7 @@ public class NotesActivity extends AbstractActivity {
 
     private void initView() {
         display.setVisibleNotePressEnter(false);
+        display.setVisibleDeleteButton(false);
     }
 
     /**
@@ -146,6 +147,7 @@ public class NotesActivity extends AbstractActivity {
             }
         }
 
+        display.setVisibleDeleteButton(!notes.isEmpty());
         display.setData(data);
     }
 
